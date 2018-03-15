@@ -90,6 +90,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
+		<!-- Dependência para solucinar incompatibilidade do Optional do java 8 no deserializer do com.fasterxml.jackson.databind.JsonMappingException -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jdk8</artifactId>
+		</dependency>
 		
 	</dependencies>
 	
