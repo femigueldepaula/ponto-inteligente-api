@@ -1,5 +1,6 @@
 package com.kazale.inteligente.api.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.kazale.inteligente.api.entities.Funcionario;
@@ -37,6 +38,14 @@ public interface FuncionarioService {
 	 * @return Optional<Funcionario>
 	 */
 	Optional<Funcionario> buscaPorId(Long id);
+	
+	/**
+	 * Busca e retorna todos os funcionarios
+	 * 
+	 * @param 
+	 * @return Optional<Funcionario>
+	 */
+	List<Funcionario> buscaTodos();
 	
 	
 }

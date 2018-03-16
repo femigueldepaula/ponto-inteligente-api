@@ -1,5 +1,6 @@
 package com.kazale.inteligente.api.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -41,6 +42,12 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 	public Optional<Funcionario> buscaPorId(Long id) {
 		log.info("Buscando funcionario pelo id: {}",id);
 		return Optional.ofNullable(this.funcionarioRepository.findOne(id));
+	}
+
+	@Override
+	public List<Funcionario> buscaTodos() {
+		log.info("Buscando todos os funcioarios");
+		return this.funcionarioRepository.findAll();
 	}
 
 }
